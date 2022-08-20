@@ -24,19 +24,15 @@ prepare() {
 
 build() {
   # Build i3-gaps
-  meson --prefix "${pkgdir}"
   ninja
 }
 
 install() {
   # Install license
-  sudo install -Dm644 "LICENSE" -t "${pkgdir}/usr/share/licenses/${name}"
-
-  # Install doc
-  sudo install -Dm644 "README.md" -t "${pkgdir}/usr/share/doc/${name}"
+  sudo install -Dm644 "../LICENSE" -t "${pkgdir}/usr/share/licenses/${name}"
 
   # Install i3-gaps
-  DESTDIR="${pkgdir}" sudo ninja install
+  sudo meson install --destdir="${pkgdir}"
 }
 
 postinst() {
