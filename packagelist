@@ -146,6 +146,7 @@ lagrange
 latte-dock-git
 lbry-deb
 lemonbar-xft-git
+lf-bin
 libcutefish-git
 libndi4-deb
 libresprite-git
@@ -241,7 +242,7 @@ reshade-shaders-git
 sed
 shell-color-scripts
 shellcheck-bin
-shellharden-bin
+shellharden
 shfmt-bin
 signal-desktop-beta-deb
 signal-desktop-deb
